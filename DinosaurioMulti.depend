@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1543986058 source:c:\users\apih9\desktop\educación\uam\ingenieria en sistemas de información\2do semestre - 5to año\procesamientoenparalelo\final\dinosauriomulti\main.cpp
+	<pthread.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<unistd.h>
+	"gotoxy.h"
+
+1543717072 c:\users\apih9\desktop\educación\uam\ingenieria en sistemas de información\2do semestre - 5to año\procesamientoenparalelo\final\dinosauriomulti\gotoxy.h
+	<iostream>
+	<windows.h>
+	<ctime>
+	<vector>
+
+1543985955 source:c:\users\apih9\desktop\educación\uam\ingenieria en sistemas de información\2do semestre - 5to año\procesamientoenparalelo\final\dinosauriomulti\generar.cpp
+	<pthread.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<unistd.h>
+	"gotoxy.h"
+
+1543985773 c:\users\apih9\desktop\educación\uam\ingenieria en sistemas de información\2do semestre - 5to año\procesamientoenparalelo\final\dinosauriomulti\generar.cpp
+	<pthread.h>
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+	<unistd.h>
+	"gotoxy.h"
+
