@@ -8,7 +8,7 @@
 #include "gotoxy.h"
 
 pthread_mutex_t count_mutex     = PTHREAD_MUTEX_INITIALIZER;
-pthread_cond_t  condition_var   = PTHREAD_COND_INITIALIZER;
+
 
 void *Header(void *arg){
     pthread_mutex_lock( &count_mutex );
@@ -93,6 +93,7 @@ void dino(int jump=0){
         printf("                ");
     }
     Sleep(40);
+    //delay(speed);
 }
 //Obstaculo: dibujo de obs
 void obs(){
@@ -132,21 +133,38 @@ void obs(){
 void * bg(){
 
     //crea nube y se mueve de derecha a izquierda
-    static int PosNUBE=0,scr=0;
-    gotoxy(46-PosNUBE,5);
-    printf(" **** ");
-    gotoxy(45-PosNUBE,6);
-    printf(" * ");
-    gotoxy(50-PosNUBE,6);
-    printf(" * ");
-    gotoxy(46-PosNUBE,7);
-    printf(" **** ");
-    PosNUBE++;
+    static int PosNUBE=0;
+     gotoxy(65-PosNUBE,5);
+    printf("  **** ");
+    gotoxy(64-PosNUBE,6);
+    printf("  * ");
+    gotoxy(69-PosNUBE,6);
+    printf("  * ");
+    gotoxy(65-PosNUBE,7);
+    printf("  **** ");
+
+    //Borra nube vieja de la consola
+     gotoxy(15-PosNUBE,5);
+    printf("     ");
+    gotoxy(15-PosNUBE,6);
+    printf("     ");
+    gotoxy(15-PosNUBE,7);
+    printf("     ");
+    gotoxy(15-PosNUBE,8);
+    printf("      ");
+    gotoxy(15-PosNUBE,9);
+    printf("    ");
+    gotoxy(10-PosNUBE,10);
+    printf("    ");
+      PosNUBE++;
+    if(PosNUBE==63){   //Si nuebe esta en esta posicion que mueva
+    PosNUBE=1;
+    if(speed>40)
+        speed++;
+    }
 
 }
 void * juego (void *arg){
-system("mode con: lines=29 cols=90");
-
 pthread_mutex_lock( &count_mutex );
  char capturar;
     int i;
